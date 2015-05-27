@@ -2,7 +2,8 @@
 
 It uses parallelism to build all possible combinations of clusters, but in this specific case it does not yield any performance gain compared to the sequential implementation.
 
-Time (without parallelism): 33ms\n
+Time (without parallelism): 33ms
+
 Time (with parallelism)   : 35ms
 
 I noticed a huge (compared to the total runtime of the program) performance boost when I set the size of the slice in line 137 from 10 to 4950 (the actual amount possible combinations with 100 cluster).
