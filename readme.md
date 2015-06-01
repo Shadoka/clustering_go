@@ -1,4 +1,4 @@
-**This repository contains a simple implementation of hierarchic clustering.**
+**This repository contains a simple implementation of hierarchic & k-means clustering.**
 
 It uses parallelism to build all possible combinations of clusters, but in this specific case it does not yield any performance gain compared to the sequential implementation.
 
@@ -10,3 +10,7 @@ I noticed a huge (compared to the total runtime of the program) performance boos
 As soon as I changed that line, the runtime went from 53ms to 35ms.
 Although much too oversized for the last passes of clustering, it fits the first pass just right. For this I conclude that reallocating memory is quite expensive and if one wants to write performant Go programms
 he needs to find a good tradeoff between setting the size too low (too many reallocations) and too high (too much memory reserved).
+
+K-means clustering is now added.
+
+That code is messy, lol
